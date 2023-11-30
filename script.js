@@ -18,13 +18,13 @@ fillcut("dlouhý řetězec", 5)  vrací “dlouhý řetezec” místo “dlouh�
 
 const fillcut = (str, len) => {
 
-    if((str.length + 1) > Number(len)) {
+    if(str.length > Number(len)) {
     return str.slice(0, (str.length - str.length + len))
 
-    }else if((str.length + 1) < Number(len)) {   
+    }else if(str.length < Number(len)) {   
     return str.padStart(len, ".")
 
-    }else if ((str.length + 1) === Number(len)) {
+    }else if (str.length === Number(len)) {
     return str 
     }   
 }
